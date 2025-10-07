@@ -1,5 +1,14 @@
 import { Star } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import React from "react";
 
 const testimonials = [
   {
@@ -26,6 +35,18 @@ const testimonials = [
     quote: "The clean interface and intuitive dashboard design really made a difference for our platform. We've seen a noticeable increase in user satisfaction since the redesign. I'm thrilled with the results.",
     rating: 4,
   },
+  {
+    name: "Jessica Williams",
+    title: "Product Owner, FinTech Innovations",
+    quote: "An incredibly talented and reliable designer. The mobile app design was sleek, modern, and user-friendly. Our conversion rates have improved since launch. A pleasure to work with!",
+    rating: 5,
+  },
+  {
+    name: "Chris Martinez",
+    title: "E-commerce Manager, StyleNow",
+    quote: "The website redesign was a huge success. It's not only visually stunning but also much easier to navigate. Our online sales have increased by 20% since the new site went live. Fantastic work!",
+    rating: 5,
+  },
 ];
 
 const StarRating = ({ rating }: { rating: number }) => (
@@ -42,6 +63,10 @@ const StarRating = ({ rating }: { rating: number }) => (
 );
 
 export const Testimonials = () => {
+  const plugin = React.useRef(
+    Autoplay({ delay: 5000, stopOnInteraction: true })
+  );
+
   return (
     <section id="testimonials" className="py-20 sm:py-32">
       <div className="container mx-auto max-w-6xl px-4 md:px-6">
@@ -53,22 +78,43 @@ export const Testimonials = () => {
             I'm proud to have collaborated with some amazing clients. Here's what they have to say about my work.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          {testimonials.map((testimonial, index) => (
-            <Card key={index} className="flex flex-col justify-between">
-              <CardContent className="p-6">
-                <StarRating rating={testimonial.rating} />
-                <blockquote className="mt-4 text-lg text-text-primary">
-                  "{testimonial.quote}"
-                </blockquote>
-              </CardContent>
-              <div className="border-t border-border p-6">
-                <p className="font-semibold text-foreground">{testimonial.name}</p>
-                <p className="text-sm text-text-secondary">{testimonial.title}</p>
-              </div>
-            </Card>
-          ))}
-        </div>
+        <Carousel
+          plugins={[plugin.current]}
+          onMouseEnter={plugin.current.stop}
+          onMouseLeave={plugin.current.reset}
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full"
+        >
+          <CarouselContent>
+            {testimonials.map((testimonial, index) => (
+              <CarouselItem key={index} className="md:basis-1/2">
+                <div className="p-1">
+                  <Card className="flex h-full flex-col justify-between">
+                    <CardContent className="flex-grow p-6">
+                      <StarRating rating={testimonial.rating} />
+                      <blockquote className="mt-4 text-lg text-text-primary">
+                        "{testimonial.quote}"
+                      </blockquote>
+                    </CardContent>
+                    <div className="border-t border-border p-6">
+                      <p className="font-semibold text-foreground">
+                        {testimonial.name}
+                      </p>
+                      <p className="text-sm text-text-secondary">
+                        {testimonial.title}
+                      </p>
+                    </div>
+                  </Card>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="hidden sm:flex" />
+          <CarouselNext className="hidden sm:flex" />
+        </Carousel>
       </div>
     </section>
   );
