@@ -78,22 +78,6 @@ const ProjectDetail = () => {
                 <p>{project.solution}</p>
               </section>
             </div>
-
-            {project.gallery.length > 0 && (
-              <section className="space-y-8 pt-12">
-                <h2 className="text-center text-4xl font-bold text-foreground">Gallery</h2>
-                <div className="space-y-8">
-                  {project.gallery.map((image, index) => (
-                    <img
-                      key={index}
-                      src={image}
-                      alt={`${project.title} gallery image ${index + 1}`}
-                      className="w-full rounded-lg object-cover shadow-lg"
-                    />
-                  ))}
-                </div>
-              </section>
-            )}
           </div>
         </article>
       </main>
