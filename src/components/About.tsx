@@ -10,15 +10,6 @@ export const About = () => {
             I'm Mushfiq Kabir, a professional UI/UX and Graphic Designer dedicated to creating intuitive, user-friendly digital experiences. My goal is to design interfaces that not only look beautiful but also meet user needs and business objectives effectively.
           </p>
         </div>
-
-        <div className="mx-auto mt-16 max-w-4xl space-y-6 text-left text-text-primary sm:text-center">
-          <p>
-            With over five years in UI/UX design, I've successfully delivered more than 100 projects, ranging from mobile apps and responsive websites to complex SaaS platforms. Using Figma, I guide projects from initial wireframes to pixel-perfect, high-fidelity mockups, always grounding my work in user-centered design principles.
-          </p>
-          <p>
-            I specialize in transforming complex ideas into clean, intuitive interfaces that provide smooth user experiences. My work empowers businesses to launch products faster, improve user flow, and create digital tools that people genuinely love to use.
-          </p>
-        </div>
       </div>
     </section>
   );
