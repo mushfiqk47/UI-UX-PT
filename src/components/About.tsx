@@ -43,22 +43,20 @@ export const About = () => {
               </a>
             </Button>
           </div>
-          <div className="order-1 lg:order-2">
-            <div className="relative">
-              <img
-                src="/mushfiq-kabir.png"
-                alt="Mushfiq Kabir"
-                className="w-full rounded-2xl object-cover shadow-2xl"
-              />
-              <div className="absolute -bottom-8 left-1/2 w-[90%] -translate-x-1/2 rounded-xl border border-border bg-card/80 p-6 backdrop-blur-sm">
-                <div className="grid grid-cols-3 gap-4 text-center">
-                  {stats.map((stat) => (
-                    <div key={stat.label}>
-                      <p className="text-3xl font-bold text-primary">{stat.value}</p>
-                      <p className="text-sm font-medium text-text-secondary">{stat.label}</p>
-                    </div>
-                  ))}
-                </div>
+          <div className="order-1 space-y-8 lg:order-2">
+            <img
+              src="/mushfiq-kabir.jpg"
+              alt="Mushfiq Kabir"
+              className="w-full rounded-2xl object-cover shadow-2xl"
+            />
+            <div className="rounded-xl border border-border bg-card p-6">
+              <div className="grid grid-cols-3 gap-4 text-center">
+                {stats.map((stat) => (
+                  <div key={stat.label}>
+                    <p className="text-3xl font-bold text-primary">{stat.value}</p>
+                    <p className="text-sm font-medium text-text-secondary">{stat.label}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
