@@ -1,5 +1,3 @@
-import { projects } from "@/data/projects";
-
 export const Hero = () => {
   return (
     <section className="py-20 sm:py-32">
@@ -12,19 +10,6 @@ export const Hero = () => {
             DESIGN
           </span>
         </h1>
-      </div>
-      <div className="container mx-auto mt-16">
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-          {projects.slice(0, 4).map((project, index) => (
-            <div key={project.slug} className={`overflow-hidden rounded-lg ${index === 0 || index === 3 ? 'md:col-span-2' : ''}`}>
-              <img
-                src={project.imageUrl}
-                alt={project.title}
-                className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
-              />
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
