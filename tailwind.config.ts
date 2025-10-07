@@ -56,8 +56,8 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        'text-primary': '#1a1a1a',
-        'text-secondary': '#6b7280',
+        'text-primary': '#E4E4E7', // Light gray for main text
+        'text-secondary': '#A1A1AA', // Darker gray for secondary text
       },
       borderRadius: {
         lg: "var(--radius)",

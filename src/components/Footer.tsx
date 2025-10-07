@@ -1,53 +1,56 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Linkedin, Dribbble, ArrowUp } from "lucide-react";
-import { Briefcase } from "lucide-react";
-
 export const Footer = () => {
-  const socialLinks = [
-    { href: "#", icon: <Dribbble size={20} />, label: "Dribbble" },
-    { href: "https://www.behance.net/mushfiqkabir1", icon: <Briefcase size={20} />, label: "Behance" },
-    { href: "#", icon: <Linkedin size={20} />, label: "LinkedIn" },
-  ];
+  const footerLinks = {
+    Product: [
+      { label: "Features", href: "#" },
+      { label: "Integrations", href: "#" },
+      { label: "Pricing", href: "#" },
+      { label: "Changelog", href: "#" },
+    ],
+    Company: [
+      { label: "About", href: "#" },
+      { label: "Blog", href: "#" },
+      { label: "Careers", href: "#" },
+      { label: "Customers", href: "#" },
+    ],
+    Resources: [
+      { label: "Community", href: "#" },
+      { label: "Contact", href: "#" },
+      { label: "DPA", href: "#" },
+      { label: "Terms of service", href: "#" },
+    ],
+    Social: [
+      { label: "Dribbble", href: "#" },
+      { label: "Behance", href: "https://www.behance.net/mushfiqkabir1" },
+      { label: "LinkedIn", href: "#" },
+    ],
+  };
 
   return (
-    <footer id="contact" className="bg-white px-4 pb-8 pt-20">
-      <div className="container mx-auto">
-        <div className="relative rounded-3xl bg-primary px-4 py-16 text-center text-white md:px-6">
-          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
-            Let's Create Impactful Designs Together 👍
-          </h2>
-          <Button asChild size="lg" className="mt-8 bg-black text-white hover:bg-gray-800">
-            <a href="mailto:mushfiqk47@gmail.com">
-              Let's Talk <ArrowRight className="ml-2 h-4 w-4" />
+    <footer className="py-20">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid grid-cols-2 gap-8 md:grid-cols-5">
+          <div className="col-span-2 md:col-span-1">
+            <a href="#" className="text-2xl font-bold text-foreground">
+              MK
             </a>
-          </Button>
-          <Button
-            variant="secondary"
-            size="icon"
-            className="absolute -top-5 right-4 h-12 w-12 rounded-full shadow-lg md:right-8"
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          >
-            <ArrowUp size={24} />
-          </Button>
-        </div>
-        <div className="mt-8 flex flex-col items-center justify-between gap-6 border-t pt-8 md:flex-row">
-          <p className="text-sm text-text-secondary">
-            © 2024 Mushfiq Kabir. All rights reserved.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            {socialLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 rounded-full border px-4 py-2 text-sm text-text-secondary transition-colors hover:border-primary hover:text-primary"
-              >
-                {link.icon}
-                {link.label}
-              </a>
-            ))}
           </div>
+          {Object.entries(footerLinks).map(([title, links]) => (
+            <div key={title}>
+              <h4 className="font-bold text-foreground">{title}</h4>
+              <ul className="mt-4 space-y-2">
+                {links.map((link) => (
+                  <li key={link.label}>
+                    <a href={link.href} className="text-text-secondary hover:text-foreground">
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+        <div className="mt-16 border-t border-border pt-8 text-center text-text-secondary">
+          <p>© 2024 Mushfiq Kabir Studio. All rights reserved.</p>
         </div>
       </div>
     </footer>

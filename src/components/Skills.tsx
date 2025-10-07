@@ -1,53 +1,36 @@
-import { Search, MousePointerClick, Blocks } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
-const skillsData = [
-  {
-    icon: <Search size={24} className="text-white" />,
-    title: "User Research",
-    description: "I conduct user research to understand their needs, behaviors, and pain points. With accurate data, I can create designs that truly solve problems.",
-    highlighted: true,
-  },
-  {
-    icon: <MousePointerClick size={24} className="text-primary" />,
-    title: "Interaction Design",
-    description: "I design interactions that are intuitive and fun, ensuring every click, swipe or tap provides a seamless experience for the user.",
-    highlighted: false,
-  },
-  {
-    icon: <Blocks size={24} className="text-primary" />,
-    title: "Design Systems",
-    description: "I build a consistent and scalable design system, ensuring every UI component is reusable and easy to manage.",
-    highlighted: false,
-  },
+const services = [
+  { title: "Web Application", description: "Design studio with people and the internet to solve problems." },
+  { title: "Branding", description: "We design intelligent web products that boost business operations." },
+  { title: "Mobile", description: "Migrating your business processes into highly efficient web apps." },
+  { title: "Illustration", description: "We create mobile apps for iOS and Android that are intuitive, and boost end-user productivity." },
 ];
 
 export const Skills = () => {
   return (
-    <section id="skills" className="bg-white py-20 sm:py-32">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center">
-          <h2 className="text-4xl font-bold tracking-tight text-text-primary sm:text-5xl">
-            Other Skills that Make Me Multitalented 👉
+    <section id="skills" className="py-20 sm:py-32">
+      <div className="container mx-auto grid gap-16 px-4 md:grid-cols-2 md:px-6">
+        <div>
+          <h2 className="text-5xl font-bold tracking-tight text-foreground sm:text-6xl">
+            What I do
           </h2>
+          <p className="mt-6 text-lg text-text-secondary">
+            Design studio with people and the internet to solve problems.
+          </p>
+          <div className="mt-8 flex items-center gap-4">
+            <img src="/mushfiq-kabir-portrait.jpg" alt="Collaborator 1" className="h-12 w-12 rounded-full object-cover grayscale" />
+            <img src="/projects/artisan.jpg" alt="Collaborator 2" className="h-12 w-12 rounded-full object-cover grayscale" />
+            <img src="/projects/karya.jpg" alt="Collaborator 3" className="h-12 w-12 rounded-full object-cover grayscale" />
+          </div>
+          <p className="mt-4 text-text-secondary">I love collaborating with my clients.</p>
         </div>
-        <div className="mx-auto mt-16 grid max-w-4xl gap-8 md:grid-cols-1">
-          {skillsData.map((skill) => (
-            <div
-              key={skill.title}
-              className={`flex flex-col items-start gap-6 rounded-2xl p-8 shadow-sm transition-all sm:flex-row sm:items-center ${
-                skill.highlighted ? "bg-primary text-white" : "bg-white"
-              }`}
-            >
-              <div className={`flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg ${skill.highlighted ? "bg-white/20" : "bg-primary/10"}`}>
-                {skill.icon}
-              </div>
-              <div>
-                <h3 className="text-xl font-bold">{skill.title}</h3>
-                <p className={`mt-2 ${skill.highlighted ? 'text-primary-foreground/80' : 'text-text-secondary'}`}>
-                  {skill.description}
-                </p>
-              </div>
-            </div>
+        <div>
+          {services.map((service) => (
+            <a key={service.title} href="#" className="group flex items-center justify-between border-b border-border py-8 transition-colors hover:border-foreground">
+              <h3 className="text-3xl font-bold text-text-secondary transition-colors group-hover:text-foreground">{service.title}</h3>
+              <ArrowUpRight className="h-8 w-8 text-text-secondary transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-foreground" />
+            </a>
           ))}
         </div>
       </div>
