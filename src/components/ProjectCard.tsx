@@ -10,7 +10,7 @@ interface ProjectCardProps {
 
 export const ProjectCard = ({ title, description, tags, imageUrl }: ProjectCardProps) => {
   return (
-    <Card className="overflow-hidden transition-all hover:shadow-lg">
+    <Card className="overflow-hidden transition-all hover:shadow-xl hover:-translate-y-2">
       <CardHeader className="p-0">
         <img
           src={imageUrl}

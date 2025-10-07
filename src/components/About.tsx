@@ -7,9 +7,9 @@ export const About = () => {
         <div className="grid items-center gap-12 md:grid-cols-2">
           <div className="flex justify-center">
             <img
-              src="/mushfiq-kabir-cv.jpg"
+              src="/mushfiq-kabir-portrait.jpg"
               alt="Mushfiq Kabir"
-              className="h-64 w-64 rounded-full object-cover object-right-top md:h-80 md:w-80"
+              className="h-auto w-full max-w-xs rounded-2xl object-cover shadow-xl md:max-w-sm"
             />
           </div>
           <div className="space-y-4 text-center md:text-left">

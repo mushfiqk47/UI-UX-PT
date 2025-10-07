@@ -1,4 +1,4 @@
-import { Briefcase } from "lucide-react";
+import { Briefcase, Linkedin, Dribbble } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -8,8 +8,14 @@ export const Footer = () => {
           <p className="text-lg font-medium">mushfiqk47@gmail.com</p>
           <p className="text-lg font-medium">+8801724548528</p>
           <div className="mt-4 flex justify-center gap-6">
-            <a href="https://www.behance.net/mushfiqkabir1" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent">
+            <a href="https://www.behance.net/mushfiqkabir1" target="_blank" rel="noopener noreferrer" className="text-text-secondary transition-colors hover:text-accent">
               <Briefcase size={24} />
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer" className="text-text-secondary transition-colors hover:text-accent">
+              <Linkedin size={24} />
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer" className="text-text-secondary transition-colors hover:text-accent">
+              <Dribbble size={24} />
             </a>
           </div>
         </div>

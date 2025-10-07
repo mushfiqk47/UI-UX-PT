@@ -1,10 +1,12 @@
-import { Progress } from "@/components/ui/progress";
-
 const skills = [
-  { name: "Figma", value: 98 },
-  { name: "XD", value: 100 },
-  { name: "Illustrator", value: 90 },
-  { name: "Photoshop", value: 70 },
+  "Figma",
+  "Adobe XD",
+  "Illustrator",
+  "Photoshop",
+  "User Research",
+  "Prototyping",
+  "Wireframing",
+  "UI Design",
 ];
 
 const languages = [
@@ -19,14 +21,10 @@ export const Skills = () => {
         <h2 className="text-center text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
           My Skills
         </h2>
-        <div className="mx-auto mt-12 grid max-w-4xl gap-8 md:grid-cols-2">
+        <div className="mx-auto mt-12 flex max-w-4xl flex-wrap justify-center gap-4">
           {skills.map((skill) => (
-            <div key={skill.name}>
-              <div className="mb-2 flex justify-between">
-                <p className="font-medium text-text-primary">{skill.name}</p>
-                <p className="text-text-secondary">{skill.value}%</p>
-              </div>
-              <Progress value={skill.value} />
+            <div key={skill} className="rounded-md bg-gray-100 px-4 py-2 font-medium text-text-secondary">
+              {skill}
             </div>
           ))}
         </div>
