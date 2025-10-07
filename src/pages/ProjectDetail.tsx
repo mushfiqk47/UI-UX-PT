@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
+import { Contact } from "@/components/Contact";
 
 const ProjectDetail = () => {
   const { slug } = useParams();
@@ -56,12 +57,6 @@ const ProjectDetail = () => {
           </header>
 
           <div className="space-y-24">
-            <img
-              src={project.heroImage}
-              alt={project.title}
-              className="w-full rounded-xl object-cover shadow-2xl"
-            />
-
             <div className="mx-auto max-w-3xl space-y-12 text-lg leading-relaxed text-text-secondary">
               <section>
                 <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Overview</h2>
@@ -78,9 +73,16 @@ const ProjectDetail = () => {
                 <p>{project.solution}</p>
               </section>
             </div>
+
+            <img
+              src={project.heroImage}
+              alt={project.title}
+              className="w-full rounded-xl object-cover shadow-2xl"
+            />
           </div>
         </article>
       </main>
+      <Contact />
       <Footer />
     </div>
   );
