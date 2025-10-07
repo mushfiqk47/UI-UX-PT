@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Check, Minus } from "lucide-react";
+import { Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
@@ -11,30 +11,41 @@ const plans = [
     name: "Starter",
     price: "$25",
     description: "Perfect for a single, focused design.",
-    details: "Includes one screen or landing page with a clean, responsive-ready Figma layout.",
-    delivery: "1 day",
-    revisions: "3",
-    sourceFiles: false,
+    features: [
+      "1 Finalized Landing Page",
+      "Clean, Responsive-Ready Figma File",
+      "1-2 Day Delivery",
+      "3 Rounds of Revisions",
+      "Includes Source Files (Figma)",
+    ],
     isRecommended: false,
   },
   {
     name: "Standard",
     price: "$50",
     description: "Ideal for small to medium-sized projects.",
-    details: "Covers up to 10 mobile screens or 5 web pages, including a full UI/UX workflow and design system.",
-    delivery: "3 days",
-    revisions: "8",
-    sourceFiles: true,
+    features: [
+      "Up to 10 Mobile Screens or 5 Web Pages",
+      "Full UI/UX Workflow (Wireframes & Mockups)",
+      "Basic Style Guide & Component Library",
+      "3-5 Day Delivery",
+      "8 Rounds of Revisions",
+      "Includes Source Files (Figma)",
+    ],
     isRecommended: false,
   },
   {
     name: "Advanced",
     price: "$100",
     description: "A comprehensive solution for larger projects.",
-    details: "Up to 20 mobile screens or 10 web pages, with advanced concepts, all source files, and unlimited revisions.",
-    delivery: "7 days",
-    revisions: "Unlimited",
-    sourceFiles: true,
+    features: [
+      "Up to 20 Mobile Screens or 10 Web Pages",
+      "Advanced UI Concepts & Interactions",
+      "Full Design System & Asset Handoff",
+      "7-10 Day Delivery",
+      "Priority Revisions & Final Polish",
+      "Includes Source Files (Figma)",
+    ],
     isRecommended: true,
   },
 ];
@@ -83,26 +94,18 @@ const PricingPage = () => {
                 {plan.price}
               </p>
               <p className="mt-4 font-semibold text-text-primary">{plan.description}</p>
-              <p className="text-sm text-text-secondary">{plan.details}</p>
               
-              <ul className="mt-8 flex-grow space-y-4">
-                <li className="flex items-center gap-3">
-                  <Check className="h-5 w-5 flex-shrink-0 text-primary" />
-                  <span>Delivery Time: <strong>{plan.delivery}</strong></span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <Check className="h-5 w-5 flex-shrink-0 text-primary" />
-                  <span>Revisions: <strong>{plan.revisions}</strong></span>
-                </li>
-                <li className="flex items-center gap-3">
-                  {plan.sourceFiles ? (
-                    <Check className="h-5 w-5 flex-shrink-0 text-primary" />
-                  ) : (
-                    <Minus className="h-5 w-5 flex-shrink-0 text-text-secondary" />
-                  )}
-                  <span>Source Files</span>
-                </li>
-              </ul>
+              <div className="mt-8 flex-grow">
+                <h4 className="font-semibold text-text-primary">What's Included:</h4>
+                <ul className="mt-4 space-y-4 text-text-secondary">
+                  {plan.features.map((feature, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <Check className="h-5 w-5 flex-shrink-0 text-primary mt-1" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
               <Button asChild className="mt-10 w-full">
                 <Link to="/contact">Get Started</Link>
