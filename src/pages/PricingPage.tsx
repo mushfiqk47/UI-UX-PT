@@ -10,8 +10,8 @@ const plans = [
   {
     name: "Starter",
     price: "$25",
-    description: "1 Screen/Landing Page",
-    details: "Clean Figma layout, Responsive-ready UI.",
+    description: "Perfect for a single, focused design.",
+    details: "Includes one screen or landing page with a clean, responsive-ready Figma layout.",
     delivery: "1 day",
     revisions: "3",
     sourceFiles: false,
@@ -20,8 +20,8 @@ const plans = [
   {
     name: "Standard",
     price: "$50",
-    description: "10 Mobile Screens/5 Web Pages",
-    details: "Full Figma Design System, Mobile & Website, UI/UX.",
+    description: "Ideal for small to medium-sized projects.",
+    details: "Covers up to 10 mobile screens or 5 web pages, including a full UI/UX workflow and design system.",
     delivery: "3 days",
     revisions: "8",
     sourceFiles: true,
@@ -30,8 +30,8 @@ const plans = [
   {
     name: "Advanced",
     price: "$100",
-    description: "20 Mobile Screens/10 Web Pages",
-    details: "Amazing concepts, all source files, and unlimited revisions.",
+    description: "A comprehensive solution for larger projects.",
+    details: "Up to 20 mobile screens or 10 web pages, with advanced concepts, all source files, and unlimited revisions.",
     delivery: "7 days",
     revisions: "Unlimited",
     sourceFiles: true,
@@ -57,10 +57,10 @@ const PricingPage = () => {
       <main className="container mx-auto px-4 py-24 sm:px-6 lg:py-32">
         <div className="mx-auto max-w-4xl text-center">
           <h1 className="text-5xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl">
-            Transparent Pricing
+            Design Packages
           </h1>
           <p className="mx-auto mt-6 max-w-3xl text-xl text-text-secondary">
-            Choose the plan that's right for you. No hidden fees, just beautiful design delivered on time. I'm committed to providing value and ensuring you're 100% satisfied with the final result.
+            I offer clear, upfront pricing to match the scope of your project. Each package is designed to deliver exceptional value and a high-quality, user-centric final product. Let's find the perfect fit for your vision.
           </p>
         </div>
 
@@ -112,8 +112,8 @@ const PricingPage = () => {
         </div>
 
         <div className="mx-auto mt-24 max-w-4xl rounded-xl border border-border bg-card p-8">
-            <h2 className="text-3xl font-bold text-center">Optional Add-ons</h2>
-            <p className="text-center text-text-secondary mt-2">You can add these on the next page.</p>
+            <h2 className="text-3xl font-bold text-center">Customize Your Package</h2>
+            <p className="text-center text-text-secondary mt-2">Need something extra? Enhance your project with these popular add-ons.</p>
             <div className="mt-8 space-y-4">
                 {addOns.map(addon => (
                     <div key={addon.name} className="flex justify-between border-b border-border pb-2">
