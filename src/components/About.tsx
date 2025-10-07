@@ -1,23 +1,3 @@
-import { Award, CalendarDays, TrendingUp } from "lucide-react";
-
-const stats = [
-  {
-    icon: <Award className="h-8 w-8 text-primary" />,
-    value: "100+",
-    label: "Projects Completed",
-  },
-  {
-    icon: <CalendarDays className="h-8 w-8 text-primary" />,
-    value: "5+",
-    label: "Years of Experience",
-  },
-  {
-    icon: <TrendingUp className="h-8 w-8 text-primary" />,
-    value: "Proven",
-    label: "Increased Engagement",
-  },
-];
-
 export const About = () => {
   return (
     <section id="about" className="py-20 sm:py-32">
@@ -29,16 +9,6 @@ export const About = () => {
           <p className="mx-auto mt-6 max-w-3xl text-lg text-text-secondary">
             I'm Mushfiq Kabir, a professional UI/UX and Graphic Designer dedicated to creating intuitive, user-friendly digital experiences. My goal is to design interfaces that not only look beautiful but also meet user needs and business objectives effectively.
           </p>
-        </div>
-
-        <div className="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-8 sm:grid-cols-3">
-          {stats.map((stat, index) => (
-            <div key={index} className="flex flex-col items-center text-center">
-              {stat.icon}
-              <p className="mt-2 text-4xl font-bold text-foreground">{stat.value}</p>
-              <p className="text-text-secondary">{stat.label}</p>
-            </div>
-          ))}
         </div>
 
         <div className="mx-auto mt-16 max-w-4xl space-y-6 text-left text-text-primary sm:text-center">
