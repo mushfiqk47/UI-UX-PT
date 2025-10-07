@@ -7,13 +7,13 @@ import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="bg-white font-sans text-text-primary">
+    <div className="font-sans text-text-primary">
       <Header />
       <main>
         <Hero />
-        <Projects />
-        <Skills />
         <About />
+        <Skills />
+        <Projects />
       </main>
       <Footer />
     </div>
