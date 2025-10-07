@@ -18,12 +18,6 @@ export const Skills = () => {
           <p className="mt-6 text-lg text-text-secondary">
             Design studio with people and the internet to solve problems.
           </p>
-          <div className="mt-8 flex items-center gap-4">
-            <img src="/mushfiq-kabir-portrait.jpg" alt="Collaborator 1" className="h-12 w-12 rounded-full object-cover grayscale" />
-            <img src="/projects/artisan.jpg" alt="Collaborator 2" className="h-12 w-12 rounded-full object-cover grayscale" />
-            <img src="/projects/karya.jpg" alt="Collaborator 3" className="h-12 w-12 rounded-full object-cover grayscale" />
-          </div>
-          <p className="mt-4 text-text-secondary">I love collaborating with my clients.</p>
         </div>
         <div>
           {services.map((service) => (
