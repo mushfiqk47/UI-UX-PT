@@ -1,4 +1,5 @@
 import { ProjectCard } from "./ProjectCard";
+import { Button } from "@/components/ui/button";
 
 const projects = [
   {
@@ -32,6 +33,13 @@ export const Projects = () => {
           {projects.map((project) => (
             <ProjectCard key={project.title} {...project} />
           ))}
+        </div>
+        <div className="mt-16 text-center">
+          <Button asChild size="lg">
+            <a href="https://www.behance.net/mushfiqkabir1" target="_blank" rel="noopener noreferrer">
+              View More on Behance
+            </a>
+          </Button>
         </div>
       </div>
     </section>

@@ -7,6 +7,7 @@ export const Header = () => {
 
   const navLinks = [
     { href: "#work", label: "Work" },
+    { href: "#skills", label: "Skills" },
     { href: "#about", label: "About" },
     { href: "#contact", label: "Contact" },
   ];
@@ -15,7 +16,7 @@ export const Header = () => {
     <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-sm">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <a href="#" className="text-2xl font-bold text-text-primary">
-          ER
+          MK
         </a>
         <nav className="hidden items-center gap-6 md:flex">
           {navLinks.map((link) => (
@@ -28,7 +29,7 @@ export const Header = () => {
             </a>
           ))}
           <Button asChild>
-            <a href="#work">View Portfolio</a>
+            <a href="https://www.behance.net/mushfiqkabir1" target="_blank" rel="noopener noreferrer">View Portfolio</a>
           </Button>
         </nav>
         <button
@@ -52,7 +53,7 @@ export const Header = () => {
               </a>
             ))}
             <Button asChild className="w-full">
-              <a href="#work" onClick={() => setIsMenuOpen(false)}>View Portfolio</a>
+              <a href="https://www.behance.net/mushfiqkabir1" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>View Portfolio</a>
             </Button>
           </nav>
         </div>
