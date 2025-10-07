@@ -13,6 +13,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/components/ui/use-toast";
+import { Globe, Mail, Phone } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -49,12 +50,37 @@ export const Contact = () => {
     <section id="contact" className="py-20">
       <div className="container mx-auto">
         <div className="mb-12 text-center">
-          <h2 className="text-4xl font-bold">Contact Me</h2>
+          <h2 className="text-4xl font-bold">Get in Touch</h2>
           <p className="mt-4 text-lg text-text-secondary">
             Have a question or want to work together?
           </p>
         </div>
-        <div className="rounded-lg border border-border bg-background/50 p-8 shadow-lg backdrop-blur-sm">
+
+        <div className="mb-16 grid grid-cols-1 gap-8 text-center md:grid-cols-3">
+          <div className="flex flex-col items-center space-y-2">
+            <Mail className="h-8 w-8 text-primary" />
+            <h3 className="pt-2 text-xl font-semibold">Email</h3>
+            <a href="mailto:mushfiqk47@gmail.com" className="text-text-secondary hover:text-primary hover:underline">
+              mushfiqk47@gmail.com
+            </a>
+          </div>
+          <div className="flex flex-col items-center space-y-2">
+            <Phone className="h-8 w-8 text-primary" />
+            <h3 className="pt-2 text-xl font-semibold">Phone</h3>
+            <a href="tel:+8801724548528" className="text-text-secondary hover:text-primary hover:underline">
+              +8801724548528
+            </a>
+          </div>
+          <div className="flex flex-col items-center space-y-2">
+            <Globe className="h-8 w-8 text-primary" />
+            <h3 className="pt-2 text-xl font-semibold">Portfolio</h3>
+            <a href="https://www.behance.net/mushfiqkabir1" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-primary hover:underline">
+              behance.net/mushfiqkabir1
+            </a>
+          </div>
+        </div>
+
+        <div className="mx-auto max-w-2xl rounded-lg border border-border bg-background/50 p-8 shadow-lg backdrop-blur-sm">
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">

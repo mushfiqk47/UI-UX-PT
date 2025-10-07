@@ -49,7 +49,7 @@ export const Header = () => {
     <header className="fixed left-1/2 top-8 z-50 w-full max-w-4xl -translate-x-1/2">
       <div className="container mx-auto flex items-center justify-between rounded-full border border-border bg-background/50 px-6 py-3 backdrop-blur-sm">
         <a href="#" className="text-xl font-bold text-foreground">
-          MK
+          Mushfiq Kabir
         </a>
         <nav className="flex items-center gap-x-8">
           {navLinks.map((link) => (

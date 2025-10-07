@@ -1,10 +1,10 @@
 import { ArrowUpRight } from "lucide-react";
 
 const services = [
-  { title: "Web Application", description: "Design studio with people and the internet to solve problems." },
-  { title: "Branding", description: "We design intelligent web products that boost business operations." },
-  { title: "Mobile", description: "Migrating your business processes into highly efficient web apps." },
-  { title: "Illustration", description: "We create mobile apps for iOS and Android that are intuitive, and boost end-user productivity." },
+  { title: "UI/UX Design", description: "Creating intuitive interfaces for web and mobile using Figma & Adobe XD." },
+  { title: "Graphic Design", description: "Crafting compelling visual identities and materials with Photoshop & Illustrator." },
+  { title: "Prototyping", description: "Building interactive prototypes to communicate design concepts and user flows." },
+  { title: "Problem Solving", description: "A creative and pragmatic approach to solving design challenges and meeting user needs." },
 ];
 
 export const Skills = () => {
@@ -16,15 +16,18 @@ export const Skills = () => {
             What I do
           </h2>
           <p className="mt-6 text-lg text-text-secondary">
-            Design studio with people and the internet to solve problems.
+            I specialize in turning complex problems into beautiful and intuitive designs.
           </p>
         </div>
         <div>
           {services.map((service) => (
-            <a key={service.title} href="#" className="group flex items-center justify-between border-b border-border py-8 transition-colors hover:border-foreground">
-              <h3 className="text-3xl font-bold text-text-secondary transition-colors group-hover:text-foreground">{service.title}</h3>
-              <ArrowUpRight className="h-8 w-8 text-text-secondary transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-foreground" />
-            </a>
+            <div key={service.title} className="group border-b border-border py-8">
+              <div className="flex items-start justify-between">
+                <h3 className="text-3xl font-bold text-text-secondary transition-colors group-hover:text-foreground">{service.title}</h3>
+                <ArrowUpRight className="h-8 w-8 flex-shrink-0 text-text-secondary transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-foreground" />
+              </div>
+              <p className="mt-2 text-text-secondary">{service.description}</p>
+            </div>
           ))}
         </div>
       </div>
