@@ -5,10 +5,16 @@ import {
   Linkedin,
   Instagram,
   ArrowRight,
-  CalendarDays,
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export const Footer = () => {
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate("/contact");
+  };
+
   const socialLinks = [
     { icon: <Mail size={20} />, href: "mailto:hello@example.com" },
     { icon: <Dribbble size={20} />, href: "#" },
@@ -35,11 +41,11 @@ export const Footer = () => {
             new projects or just for chatting.
           </p>
           <Button
+            onClick={handleNavigate}
             variant="outline"
             className="mt-10 rounded-full border-gray-600 bg-transparent px-8 py-6 text-white hover:bg-gray-800 hover:text-white"
           >
-            <CalendarDays className="mr-3 h-5 w-5" />
-            Book a Meeting
+            Let's Go
             <ArrowRight className="ml-3 h-5 w-5" />
           </Button>
         </div>
