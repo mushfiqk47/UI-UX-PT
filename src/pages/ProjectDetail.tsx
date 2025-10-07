@@ -6,7 +6,6 @@ import { Footer } from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
-import { Contact } from "@/components/Contact";
 
 const ProjectDetail = () => {
   const { slug } = useParams();
@@ -82,7 +81,6 @@ const ProjectDetail = () => {
           </div>
         </article>
       </main>
-      <Contact />
       <Footer />
     </div>
   );
