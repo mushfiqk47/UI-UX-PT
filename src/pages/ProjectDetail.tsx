@@ -85,7 +85,9 @@ const ProjectDetail = () => {
             <img
               src={project.heroImage}
               alt={project.title}
-              className="w-full rounded-xl object-cover shadow-2xl"
+              loading="lazy"
+              className="w-full rounded-xl object-cover shadow-2xl opacity-0 transition-opacity duration-700 will-change-auto"
+              onLoad={(e) => (e.currentTarget.style.opacity = '1')}
             />
           </div>
         </article>

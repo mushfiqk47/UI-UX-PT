@@ -8,12 +8,12 @@ interface ProjectListItemProps {
 
 export const ProjectListItem = ({ project }: ProjectListItemProps) => {
   return (
-    <div className="group">
+    <div className="group transition-transform duration-300 ease-out hover:-translate-y-0.5">
       <Link
         to={`/project/${project.slug}`}
         className="flex flex-col gap-8 md:flex-row md:items-center"
       >
-        <div className="w-full overflow-hidden rounded-lg md:w-1/3">
+        <div className="w-full overflow-hidden rounded-lg md:w-1/3 shadow-sm transition-shadow duration-300 group-hover:shadow-xl">
           <img
             src={project.heroImage}
             alt={project.title}

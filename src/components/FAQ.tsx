@@ -28,20 +28,27 @@ const faqs = [
   },
 ];
 
+import { Reveal } from "@/components/Reveal";
+
 export const FAQ = () => {
   return (
     <section id="faq" className="py-20 sm:py-32">
       <div className="container mx-auto grid max-w-6xl gap-12 px-4 md:grid-cols-3 md:px-6">
         <div className="md:col-span-1">
-          <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-            Frequently Asked Questions
-          </h2>
-          <p className="mt-4 text-text-secondary">
-            Here are some common questions about my services and process. If you have other questions, feel free to reach out.
-          </p>
+          <Reveal>
+            <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+              Frequently Asked Questions
+            </h2>
+          </Reveal>
+          <Reveal delayMs={100}>
+            <p className="mt-4 text-text-secondary">
+              Here are some common questions about my services and process. If you have other questions, feel free to reach out.
+            </p>
+          </Reveal>
         </div>
         <div className="md:col-span-2">
-          <Accordion type="single" collapsible className="w-full">
+          <Reveal delayMs={150}>
+            <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`}>
                 <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
@@ -53,6 +60,7 @@ export const FAQ = () => {
               </AccordionItem>
             ))}
           </Accordion>
+          </Reveal>
         </div>
       </div>
     </section>

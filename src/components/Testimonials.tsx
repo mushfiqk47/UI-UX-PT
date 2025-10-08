@@ -62,6 +62,8 @@ const StarRating = ({ rating }: { rating: number }) => (
   </div>
 );
 
+import { Reveal } from "@/components/Reveal";
+
 export const Testimonials = () => {
   const plugin = React.useRef(
     Autoplay({ delay: 5000, stopOnInteraction: true })
@@ -71,12 +73,16 @@ export const Testimonials = () => {
     <section id="testimonials" className="py-20 sm:py-32">
       <div className="container mx-auto max-w-6xl px-4 md:px-6">
         <div className="mb-16 text-center">
-          <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-            What My Clients Say
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-text-secondary">
-            I'm proud to have collaborated with some amazing clients. Here's what they have to say about my work.
-          </p>
+          <Reveal>
+            <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+              What My Clients Say
+            </h2>
+          </Reveal>
+          <Reveal delayMs={100}>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-text-secondary">
+              I'm proud to have collaborated with some amazing clients. Here's what they have to say about my work.
+            </p>
+          </Reveal>
         </div>
         <Carousel
           plugins={[plugin.current]}
