@@ -6,7 +6,6 @@ import { Footer } from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
-
 const ProjectDetail = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
@@ -58,18 +57,28 @@ const ProjectDetail = () => {
           <div className="space-y-24">
             <div className="mx-auto max-w-3xl space-y-12 text-lg leading-relaxed text-text-secondary">
               <section>
-                <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Overview</h2>
+                <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Project Overview</h2>
                 <p className="whitespace-pre-wrap">{project.overview}</p>
               </section>
-
               <section>
-                <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">The Problem</h2>
+                <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">1. The Problem: A Disconnect Between Brand and Digital Experience</h2>
                 <p className="whitespace-pre-wrap">{project.problem}</p>
               </section>
-
               <section>
-                <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">The Solution</h2>
-                <p className="whitespace-pre-wrap">{project.solution}</p>
+                <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">2. Research & Discovery</h2>
+                <p className="whitespace-pre-wrap">{project.research}</p>
+              </section>
+              <section>
+                <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">3. The UX Strategy: Structuring the Narrative</h2>
+                <p className="whitespace-pre-wrap">{project.uxStrategy}</p>
+              </section>
+              <section>
+                <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">4. The UI Design: A Visual Language of Heritage and Clarity</h2>
+                <p className="whitespace-pre-wrap">{project.uiDesign}</p>
+              </section>
+              <section>
+                <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">5. Key Takeaways & Results</h2>
+                <p className="whitespace-pre-wrap">{project.keyTakeaways}</p>
               </section>
             </div>
 
