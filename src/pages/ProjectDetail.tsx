@@ -59,17 +59,17 @@ const ProjectDetail = () => {
             <div className="mx-auto max-w-3xl space-y-12 text-lg leading-relaxed text-text-secondary">
               <section>
                 <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Overview</h2>
-                <p>{project.overview}</p>
+                <p className="whitespace-pre-wrap">{project.overview}</p>
               </section>
 
               <section>
                 <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">The Problem</h2>
-                <p>{project.problem}</p>
+                <p className="whitespace-pre-wrap">{project.problem}</p>
               </section>
 
               <section>
                 <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">The Solution</h2>
-                <p>{project.solution}</p>
+                <p className="whitespace-pre-wrap">{project.solution}</p>
               </section>
             </div>
 

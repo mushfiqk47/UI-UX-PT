@@ -19,9 +19,34 @@ export const projects: Project[] = [
     tags: ['UI/UX Strategy', 'Branding', 'Web Design'],
     imageUrl: '/projects/generations-artisan.jpg',
     heroImage: '/projects/generations-artisan.jpg',
-    overview: '"Generations Artisan Co." is a brand built on a heritage of craftsmanship, where products are designed to be cherished and passed down through families. This project involved a complete UX strategy and UI redesign to transform their static online brochure into an immersive digital experience that reflects the brand\'s core values.',
-    problem: 'The brand\'s digital presence was fragmented and failed to communicate their story. The value proposition was unclear, the content hierarchy was confusing, calls-to-action were weak, and there was a lack of trust-building social proof, creating a disconnect between the brand and its online experience.',
-    solution: 'We developed a new UX strategy focused on narrative storytelling. The information architecture was reorganized to guide users on a journey from discovery to commitment. This involved reframing the hero section with a clear value proposition, clarifying product collections and pricing with transparent language, and transforming key points into scannable, icon-based value pillars. We also built a compelling community section with authentic stories to build social proof and foster loyalty.',
+    overview: `
+"Generations Artisan Co." is a brand built on a heritage of craftsmanship, where products are designed to be cherished and passed down through families. Their existing digital presence was fragmented and failed to communicate the depth of their story, the quality of their work, and the value of their community.
+
+This project involved a complete UX strategy and UI redesign for their primary marketing website. The goal was to transform a static online brochure into an immersive digital experience that reflects the brand's core values: legacy, quality, and community.
+
+My Role: Lead UI/UX Designer
+Responsibilities: User Research, Information Architecture, Wireframing, Visual Design, Prototyping
+Timeline: 8 Weeks
+    `,
+    problem: `
+The initial website audit revealed several key issues:
+- Unclear Value Proposition: The messaging was abstract and failed to immediately communicate what the company does.
+- Ineffective Content Hierarchy: Important sections were presented with confusing financial terminology, which was alienating for potential customers.
+- Weak Call-to-Actions (CTAs): Vague statements provided no clear path for user engagement.
+- Lack of Trust & Social Proof: The "From Our Community" section was underdeveloped and offered no clear benefit.
+
+User Problem Statement:
+"How might we help potential customers who value quality and heritage quickly understand the brand's legacy, easily explore its products, and feel confident in making a significant, long-term investment?"
+    `,
+    solution: `
+The information architecture was reorganized to guide users on a journey from discovery to commitment. Key UX decisions included:
+- Reframing the Hero Section: We replaced an ambiguous tagline with a clear, value-driven headline: "Heirloom Quality, Designed for Modern Living."
+- Clarifying Pricing: The section was renamed to "Investment & Process," with transparent "Starting From" figures for different service tiers.
+- Creating a Clear Value Proposition: A dense text block was transformed into an icon-based section with four clear pillars: Technical Mastery, Sustainable Sourcing, Multi-Generational Design, and Personalized Collaboration.
+- Building a Compelling Community Section: We developed a robust "Family Stories" section with high-quality testimonials and transformed "Join Our Community" into "Join the Legacy" with tangible benefits.
+
+The UI was designed with a visual language of heritage and clarity, using a classic Serif for headings, a clean Sans-Serif for body text, and an earthy, neutral color palette. The redesigned website successfully repositioned the brand, leading to an increase in consultation requests and time-on-site.
+    `,
     gallery: ['/projects/generations-artisan.jpg']
   },
   {
