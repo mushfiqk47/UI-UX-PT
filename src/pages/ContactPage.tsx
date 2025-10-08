@@ -19,24 +19,19 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "@/components/ui/use-toast";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { CheckCircle2, Mail, Phone, MapPin } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import { useEffect } from "react";
 
 const formSchema = z.object({
-  firstName: z.string().min(2, "First name is too short."),
-  lastName: z.string().min(2, "Last name is too short."),
+  fullName: z.string().min(2, "Please enter your full name."),
   email: z.string().email("Please enter a valid email."),
   companyName: z.string().optional(),
   pricingPlan: z.string({ required_error: "Please select a pricing plan." }),
   budget: z.string().optional(),
   message: z.string().min(10, "Message must be at least 10 characters."),
-  agreeToTerms: z.boolean().refine((val) => val === true, {
-    message: "You must agree to the terms.",
-  }),
 });
 
 const whyPartnerWithMe = [
@@ -54,12 +49,10 @@ const ContactPage = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      firstName: "",
-      lastName: "",
+      fullName: "",
       email: "",
       companyName: "",
       message: "",
-      agreeToTerms: false,
     },
   });
 
@@ -109,34 +102,19 @@ const ContactPage = () => {
                   onSubmit={form.handleSubmit(onSubmit)}
                   className="space-y-6"
                 >
-                  <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                    <FormField
-                      control={form.control}
-                      name="firstName"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>First Name</FormLabel>
-                          <FormControl>
-                            <Input placeholder="Alber" {...field} />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      control={form.control}
-                      name="lastName"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Last Name</FormLabel>
-                          <FormControl>
-                            <Input placeholder="Susanto" {...field} />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                  </div>
+                  <FormField
+                    control={form.control}
+                    name="fullName"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Full Name</FormLabel>
+                        <FormControl>
+                          <Input placeholder="Your full name" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
                   <FormField
                     control={form.control}
                     name="email"
@@ -145,7 +123,7 @@ const ContactPage = () => {
                         <FormLabel>Email Address</FormLabel>
                         <FormControl>
                           <Input
-                            placeholder="albert@susanto.com"
+                            placeholder="your.email@example.com"
                             {...field}
                           />
                         </FormControl>
@@ -158,9 +136,9 @@ const ContactPage = () => {
                     name="companyName"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Company Name</FormLabel>
+                        <FormLabel>Company Name (Optional)</FormLabel>
                         <FormControl>
-                          <Input placeholder="Name company" {...field} />
+                          <Input placeholder="Your company name" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -214,7 +192,7 @@ const ContactPage = () => {
                         <FormLabel>Message</FormLabel>
                         <FormControl>
                           <Textarea
-                            placeholder="Write your message..."
+                            placeholder="Tell me a little about your project..."
                             className="min-h-[120px] resize-none"
                             {...field}
                           />
@@ -223,35 +201,8 @@ const ContactPage = () => {
                       </FormItem>
                     )}
                   />
-                  <FormField
-                    control={form.control}
-                    name="agreeToTerms"
-                    render={({ field }) => (
-                      <FormItem className="flex flex-row items-start space-x-3 space-y-0">
-                        <FormControl>
-                          <Checkbox
-                            checked={field.value}
-                            onCheckedChange={field.onChange}
-                          />
-                        </FormControl>
-                        <div className="space-y-1 leading-none">
-                          <FormLabel>
-                            I agree to the{" "}
-                            <a href="#" className="text-primary hover:underline">
-                              Terms of Use
-                            </a>{" "}
-                            and{" "}
-                            <a href="#" className="text-primary hover:underline">
-                              Privacy Policy
-                            </a>
-                          </FormLabel>
-                          <FormMessage />
-                        </div>
-                      </FormItem>
-                    )}
-                  />
                   <Button type="submit" className="w-full">
-                    Submit
+                    Send Message
                   </Button>
                 </form>
               </Form>
