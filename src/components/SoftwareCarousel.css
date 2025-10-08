@@ -1,0 +1,28 @@
+.ticker-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+.ticker {
+  display: flex;
+  width: fit-content;
+  animation: ticker 40s linear infinite;
+}
+
+.ticker__item {
+  flex-shrink: 0;
+  padding: 0 2rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: hsl(var(--secondary-foreground) / 0.6);
+  white-space: nowrap;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
