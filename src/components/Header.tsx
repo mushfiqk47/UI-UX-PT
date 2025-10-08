@@ -9,7 +9,7 @@ export const Header = () => {
   const navLinks = [
     {
       label: "Projects",
-      href: isHomePage ? "#work" : "/#work",
+      href: "/projects",
     },
     {
       label: "Skills",
@@ -52,7 +52,7 @@ export const Header = () => {
         </nav>
         <div className="hidden md:block">
           <Button asChild>
-            <a href="mailto:mushfiqkabir@email.com">Hire Me</a>
+            <Link to="/contact">Hire Me</Link>
           </Button>
         </div>
         <button className="p-2 md:hidden">
