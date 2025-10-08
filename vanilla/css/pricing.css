@@ -1,0 +1,120 @@
+/* Pricing specific styles */
+.pricing-section {
+    padding: 6rem 0;
+    background-color: var(--background);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.pricing-card {
+    background-color: var(--card);
+    border-radius: var(--radius);
+    padding: 2rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--foreground);
+    margin: 1rem 0;
+}
+
+.price-currency {
+    font-size: 1.5rem;
+    vertical-align: super;
+}
+
+.pricing-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+.delivery-time {
+    color: var(--muted-foreground);
+    font-size: 0.875rem;
+    margin-top: 1rem;
+}
+
+.features-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.features-list li {
+    padding: 0.75rem 0;
+    color: var(--foreground);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.features-list li::before {
+    content: "✓";
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.pricing-button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 2rem;
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    text-align: center;
+    text-decoration: none;
+    border-radius: var(--radius);
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.pricing-button:hover {
+    background-color: color-mix(in srgb, var(--primary) 80%, black);
+}
+
+.best-value {
+    position: absolute;
+    top: 1rem;
+    right: -2rem;
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    padding: 0.25rem 3rem;
+    transform: rotate(45deg);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+    
+    .pricing-card {
+        margin-bottom: 1rem;
+    }
+}

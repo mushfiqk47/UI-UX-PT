@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mushfiq - Web Designer & Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <a href="/" class="logo">Mushfiq</a>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="/pricing.html" class="nav-link">Pricing</a></li>
+                    <li><a href="/contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="mailto:mushfiqkabir@email.com" class="hire-button">Hire Me</a>
+            <button class="menu-button" aria-label="Toggle menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="4" y1="12" x2="20" y2="12"></line>
+                    <line x1="4" y1="6" x2="20" y2="6"></line>
+                    <line x1="4" y1="18" x2="20" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <div class="mobile-menu">
+            <ul class="mobile-nav-links">
+                <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+                <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+                <li><a href="#testimonials" class="mobile-nav-link">Testimonials</a></li>
+                <li><a href="#about" class="mobile-nav-link">About</a></li>
+                <li><a href="/pricing.html" class="mobile-nav-link">Pricing</a></li>
+                <li><a href="/contact" class="mobile-nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>
+                    Elevating your brand
+                    <br>
+                    with exceptional
+                    <span class="hero-highlight">DESIGN</span>
+                </h1>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="project-grid" id="projectsGrid">
+                    <!-- Projects will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">Skills & Expertise</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3>Web Design</h3>
+                        <p>Creating beautiful and functional user interfaces</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Development</h3>
+                        <p>Building responsive and performant web applications</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>UI/UX</h3>
+                        <p>Designing intuitive user experiences</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="section">
+            <div class="container">
+                <h2 class="section-title">What Clients Say</h2>
+                <div class="testimonials-grid">
+                    <!-- Testimonials will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <!-- About content will be added here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">Contact</h3>
+                <ul class="footer-links">
+                    <li><a href="mailto:mushfiqkabir@email.com" class="footer-link">Email</a></li>
+                    <li><a href="#" class="footer-link">LinkedIn</a></li>
+                    <li><a href="#" class="footer-link">GitHub</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Navigation</h3>
+                <ul class="footer-links">
+                    <li><a href="#projects" class="footer-link">Projects</a></li>
+                    <li><a href="#skills" class="footer-link">Skills</a></li>
+                    <li><a href="#about" class="footer-link">About</a></li>
+                    <li><a href="/pricing.html" class="footer-link">Pricing</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/projects.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
