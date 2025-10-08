@@ -37,7 +37,7 @@ export const About = () => {
               </p>
             </div>
             <Button asChild className="mt-8 rounded-full px-8 py-6 text-lg">
-              <a href="/mushfiq-kabir-cv.jpg" download>
+              <a href="/Mushfiq-CV.jpg" download="Mushfiq-Kabir-CV.jpg">
                 <Download className="mr-3 h-5 w-5" />
                 Download CV
               </a>
