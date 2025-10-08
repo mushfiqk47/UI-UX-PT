@@ -1,5 +1,5 @@
 import { Button } from "./ui/button";
-import { ArrowRight, Mail, Phone, MapPin, Instagram, Linkedin } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Mail, Phone, MapPin, Instagram, Linkedin } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 export const Footer = () => {
@@ -59,6 +59,25 @@ export const Footer = () => {
                 className="text-text-secondary transition-colors hover:text-foreground"
               >
                 <Linkedin className="h-5 w-5" />
+              </a>
+              <a
+                href="https://www.behance.net/mushfiqkabir1"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Behance"
+                className="text-text-secondary transition-colors hover:text-foreground text-sm underline underline-offset-4"
+              >
+                Behance
+              </a>
+              <a
+                href="https://www.upwork.com/freelancers/~018020165d06cc034e"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Upwork"
+                className="inline-flex items-center gap-1 rounded-full border border-primary/40 bg-primary/10 px-3 py-1 text-sm font-medium text-primary transition-colors hover:bg-primary/20"
+              >
+                Upwork
+                <ArrowUpRight className="h-4 w-4" />
               </a>
             </div>
           </div>
