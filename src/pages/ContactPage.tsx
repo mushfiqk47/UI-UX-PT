@@ -35,10 +35,10 @@ const formSchema = z.object({
 });
 
 const whyPartnerWithMe = [
-    { title: "Clear Communication", description: "You'll get regular updates and direct access, ensuring we're always on the same page." },
-    { title: "Reliable Delivery", description: "I respect your time and deadlines. You'll receive a clear timeline and on-time delivery, guaranteed." },
-    { title: "Dedicated to Your Success", description: "Your success is my priority. I create designs that not only look great but also achieve your business goals." },
-    { title: "Professional Workflow", description: "Experience an organized, transparent, and collaborative process from start to finish." },
+    "Clear Communication",
+    "Reliable Delivery",
+    "Dedicated to Your Success",
+    "Professional Workflow",
 ];
 
 const ContactPage = () => {
@@ -82,14 +82,11 @@ const ContactPage = () => {
               </p>
               <div className="mt-12">
                 <h2 className="text-2xl font-bold text-foreground">Why Partner With Me?</h2>
-                <ul className="mt-6 space-y-6">
+                <ul className="mt-6 space-y-4">
                   {whyPartnerWithMe.map((item) => (
-                    <li key={item.title} className="flex items-start gap-4">
-                      <CheckCircle2 className="h-6 w-6 flex-shrink-0 text-primary mt-1" />
-                      <div>
-                        <h3 className="font-semibold text-foreground">{item.title}</h3>
-                        <p className="text-text-secondary">{item.description}</p>
-                      </div>
+                    <li key={item} className="flex items-center gap-3">
+                      <CheckCircle2 className="h-6 w-6 flex-shrink-0 text-primary" />
+                      <span className="font-semibold text-foreground">{item}</span>
                     </li>
                   ))}
                 </ul>
