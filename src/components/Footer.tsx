@@ -1,5 +1,5 @@
 import { Button } from "./ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Mail, Phone, MapPin, Instagram, Linkedin } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 export const Footer = () => {
@@ -27,6 +27,42 @@ export const Footer = () => {
             Feel free to contact me if having any questions. I'm available for
             new projects or just for chatting.
           </p>
+
+          <div className="mx-auto mt-8 grid w-full max-w-2xl gap-4 text-left sm:grid-cols-2">
+            <a href="mailto:mushfiqk7@gmail.com" className="flex items-center gap-3 text-text-secondary transition-colors hover:text-foreground">
+              <Mail className="h-5 w-5" />
+              <span className="truncate">mushfiqk7@gmail.com</span>
+            </a>
+            <a href="tel:+880172454828" className="flex items-center gap-3 text-text-secondary transition-colors hover:text-foreground">
+              <Phone className="h-5 w-5" />
+              <span>+880172454828</span>
+            </a>
+            <div className="flex items-center gap-3 text-text-secondary">
+              <MapPin className="h-5 w-5" />
+              <span>Asia, Dhaka, Bangladesh</span>
+            </div>
+            <div className="flex items-center gap-4">
+              <a
+                href="https://www.instagram.com/mushfiqkabir67/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="text-text-secondary transition-colors hover:text-foreground"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/mushfiq-kabir-uiux/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="text-text-secondary transition-colors hover:text-foreground"
+              >
+                <Linkedin className="h-5 w-5" />
+              </a>
+            </div>
+          </div>
+
           <Button
             onClick={handleNavigate}
             variant="outline"
