@@ -29,9 +29,9 @@ export const Footer = () => {
           </p>
 
           <div className="mx-auto mt-8 grid w-full max-w-2xl gap-4 text-left sm:grid-cols-2">
-            <a href="mailto:mushfiqk7@gmail.com" className="flex items-center gap-3 text-text-secondary transition-colors hover:text-foreground">
+            <a href="mailto:mushfiqk47@gmail.com" className="flex items-center gap-3 text-text-secondary transition-colors hover:text-foreground">
               <Mail className="h-5 w-5" />
-              <span className="truncate">mushfiqk7@gmail.com</span>
+              <span className="truncate">mushfiqk47@gmail.com</span>
             </a>
             <a href="tel:+880172454828" className="flex items-center gap-3 text-text-secondary transition-colors hover:text-foreground">
               <Phone className="h-5 w-5" />
@@ -41,7 +41,7 @@ export const Footer = () => {
               <MapPin className="h-5 w-5" />
               <span>Asia, Dhaka, Bangladesh</span>
             </div>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 justify-start">
               <a
                 href="https://www.instagram.com/mushfiqkabir67/"
                 target="_blank"
@@ -76,7 +76,7 @@ export const Footer = () => {
       <div className="border-t border-border">
         <div className="container mx-auto flex flex-col items-center justify-center px-4 py-6 md:flex-row md:px-6">
           <p className="text-center text-sm text-text-secondary">
-            © Mushfiq Kabir, 2024. All rights reserved.
+            © Mushfiq Kabir, 2025. All rights reserved.
           </p>
         </div>
       </div>
