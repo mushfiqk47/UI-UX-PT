@@ -39,6 +39,13 @@ const formSchema = z.object({
   }),
 });
 
+const whyPartnerWithMe = [
+    { title: "Clear & Consistent Communication", description: "No guessing games. You'll receive regular updates and have direct access to me throughout the project." },
+    { title: "Reliable Delivery, Guaranteed", description: "I respect your time and business goals. You'll receive a clear timeline and can count on me to meet our deadlines." },
+    { title: "Dedicated to Your Success", description: "Your project's success is my success. I'm invested in creating a solution that not only looks great but also achieves your objectives." },
+    { title: "Professional Workflow", description: "From our first briefing to the final file handoff, you'll experience an organized, transparent, and collaborative process." },
+];
+
 const ContactPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -67,14 +74,6 @@ const ContactPage = () => {
     form.reset();
   }
 
-  const features = [
-    "Reliable Delivery",
-    "Comprehensive Token & Digest",
-    "Customizable Notifications",
-    "Real-Time Updates",
-    "Seamless Integration",
-  ];
-
   return (
     <div className="bg-background font-sans text-foreground">
       <Header />
@@ -82,42 +81,25 @@ const ContactPage = () => {
         <div className="mx-auto max-w-6xl rounded-xl border border-border bg-card p-8 shadow-2xl md:p-12">
           <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
             <div className="text-text-primary">
-              <p className="text-sm font-semibold uppercase tracking-widest text-primary">
-                Contact Us
-              </p>
-              <h1 className="mt-4 text-4xl font-bold text-foreground sm:text-5xl">
-                Get in Touch with Us
+              <h1 className="text-4xl font-bold text-foreground sm:text-5xl">
+                Let's Create Something Amazing Together
               </h1>
               <p className="mt-6 text-lg text-text-secondary">
-                We're here to help. Whether you're interested in learning more
-                about our services or need support, we're happy to assist you.
+                Start Your Project with a Trusted Design Partner. You're not just looking for a designer; you're looking for a partner to bring your vision to life. I focus on clear communication, reliable delivery, and designs that drive real results for your business.
               </p>
-              <ul className="mt-8 space-y-4">
-                {features.map((feature) => (
-                  <li key={feature} className="flex items-center gap-3">
-                    <CheckCircle2 className="h-6 w-6 text-primary" />
-                    <span className="text-lg font-medium">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-12 border-t border-border pt-8">
-                <h2 className="text-xl font-semibold text-foreground">
-                  General Contact Info
-                </h2>
-                <div className="mt-4 space-y-4 text-text-secondary">
-                  <p className="flex items-center gap-3">
-                    <Phone className="h-5 w-5 text-primary" />
-                    <span>+8801724548528</span>
-                  </p>
-                  <p className="flex items-center gap-3">
-                    <Mail className="h-5 w-5 text-primary" />
-                    <span>mushfiqk47@gmail.com</span>
-                  </p>
-                  <p className="flex items-center gap-3">
-                    <MapPin className="h-5 w-5 text-primary" />
-                    <span>Dhaka, Bangladesh</span>
-                  </p>
-                </div>
+              <div className="mt-12">
+                <h2 className="text-2xl font-bold text-foreground">Why Partner With Me?</h2>
+                <ul className="mt-6 space-y-6">
+                  {whyPartnerWithMe.map((item) => (
+                    <li key={item.title} className="flex items-start gap-4">
+                      <CheckCircle2 className="h-6 w-6 flex-shrink-0 text-primary mt-1" />
+                      <div>
+                        <h3 className="font-semibold text-foreground">{item.title}</h3>
+                        <p className="text-text-secondary">{item.description}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
 
