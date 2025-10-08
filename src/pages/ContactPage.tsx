@@ -12,7 +12,13 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "@/components/ui/use-toast";
 import { Header } from "@/components/Header";
@@ -26,7 +32,7 @@ const formSchema = z.object({
   email: z.string().email("Please enter a valid email."),
   companyName: z.string().optional(),
   pricingPlan: z.string({ required_error: "Please select a pricing plan." }),
-  customPlanDetails: z.string().optional(),
+  budget: z.string().optional(),
   message: z.string().min(10, "Message must be at least 10 characters."),
   agreeToTerms: z.boolean().refine((val) => val === true, {
     message: "You must agree to the terms.",
@@ -182,32 +188,21 @@ const ContactPage = () => {
                     control={form.control}
                     name="pricingPlan"
                     render={({ field }) => (
-                      <FormItem className="space-y-3">
+                      <FormItem>
                         <FormLabel>Select a Pricing Plan</FormLabel>
-                        <FormControl>
-                          <RadioGroup
-                            onValueChange={field.onChange}
-                            defaultValue={field.value}
-                            className="flex flex-col space-y-2"
-                          >
-                            <FormItem className="flex items-center space-x-3 space-y-0">
-                              <FormControl><RadioGroupItem value="starter" /></FormControl>
-                              <FormLabel className="font-normal">Starter - $25</FormLabel>
-                            </FormItem>
-                            <FormItem className="flex items-center space-x-3 space-y-0">
-                              <FormControl><RadioGroupItem value="standard" /></FormControl>
-                              <FormLabel className="font-normal">Standard - $50</FormLabel>
-                            </FormItem>
-                            <FormItem className="flex items-center space-x-3 space-y-0">
-                              <FormControl><RadioGroupItem value="advanced" /></FormControl>
-                              <FormLabel className="font-normal">Advanced - $100</FormLabel>
-                            </FormItem>
-                            <FormItem className="flex items-center space-x-3 space-y-0">
-                              <FormControl><RadioGroupItem value="custom" /></FormControl>
-                              <FormLabel className="font-normal">Custom Plan</FormLabel>
-                            </FormItem>
-                          </RadioGroup>
-                        </FormControl>
+                        <Select onValueChange={field.onChange} defaultValue={field.value}>
+                          <FormControl>
+                            <SelectTrigger>
+                              <SelectValue placeholder="Select a plan" />
+                            </SelectTrigger>
+                          </FormControl>
+                          <SelectContent>
+                            <SelectItem value="starter">Starter - $25</SelectItem>
+                            <SelectItem value="standard">Standard - $50</SelectItem>
+                            <SelectItem value="advanced">Advanced - $100</SelectItem>
+                            <SelectItem value="custom">Custom Plan</SelectItem>
+                          </SelectContent>
+                        </Select>
                         <FormMessage />
                       </FormItem>
                     )}
@@ -216,16 +211,12 @@ const ContactPage = () => {
                   {pricingPlan === 'custom' && (
                     <FormField
                       control={form.control}
-                      name="customPlanDetails"
+                      name="budget"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Custom Plan Details</FormLabel>
+                          <FormLabel>Your Budget</FormLabel>
                           <FormControl>
-                            <Textarea
-                              placeholder="Please describe your project requirements..."
-                              className="resize-none"
-                              {...field}
-                            />
+                            <Input placeholder="e.g., $500 - $1000" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
