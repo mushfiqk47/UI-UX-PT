@@ -6,8 +6,6 @@ import { Footer } from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
-import { useEffect } from "react";
-
 const ProjectDetail = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
