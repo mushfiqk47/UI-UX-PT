@@ -1,5 +1,6 @@
 import { Button } from "./ui/button";
 import { Download } from "lucide-react";
+import { Reveal } from "@/components/Reveal";
 
 const stats = [
   {
