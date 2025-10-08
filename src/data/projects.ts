@@ -13,6 +13,18 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: 'generations-artisan-co',
+    title: 'Generations Artisan Co.',
+    description: 'A complete UX strategy and UI redesign for a heritage brand to create an immersive digital experience that reflects legacy, quality, and community.',
+    tags: ['UI/UX Strategy', 'Branding', 'Web Design'],
+    imageUrl: '/projects/generations-artisan.jpg',
+    heroImage: '/projects/generations-artisan.jpg',
+    overview: '"Generations Artisan Co." is a brand built on a heritage of craftsmanship, where products are designed to be cherished and passed down through families. This project involved a complete UX strategy and UI redesign to transform their static online brochure into an immersive digital experience that reflects the brand\'s core values.',
+    problem: 'The brand\'s digital presence was fragmented and failed to communicate their story. The value proposition was unclear, the content hierarchy was confusing, calls-to-action were weak, and there was a lack of trust-building social proof, creating a disconnect between the brand and its online experience.',
+    solution: 'We developed a new UX strategy focused on narrative storytelling. The information architecture was reorganized to guide users on a journey from discovery to commitment. This involved reframing the hero section with a clear value proposition, clarifying product collections and pricing with transparent language, and transforming key points into scannable, icon-based value pillars. We also built a compelling community section with authentic stories to build social proof and foster loyalty.',
+    gallery: ['/projects/generations-artisan.jpg']
+  },
+  {
     slug: 'dantage-digital-agency',
     title: 'Dantage Digital Agency',
     description: 'A comprehensive website redesign for a digital agency to boost their online presence and lead generation.',
