@@ -35,10 +35,10 @@ const formSchema = z.object({
 });
 
 const whyPartnerWithMe = [
-    { title: "Clear & Consistent Communication", description: "No guessing games. You'll receive regular updates and have direct access to me throughout the project." },
-    { title: "Reliable Delivery, Guaranteed", description: "I respect your time and business goals. You'll receive a clear timeline and can count on me to meet our deadlines." },
-    { title: "Dedicated to Your Success", description: "Your project's success is my success. I'm invested in creating a solution that not only looks great but also achieves your objectives." },
-    { title: "Professional Workflow", description: "From our first briefing to the final file handoff, you'll experience an organized, transparent, and collaborative process." },
+    { title: "Clear Communication", description: "You'll get regular updates and direct access, ensuring we're always on the same page." },
+    { title: "Reliable Delivery", description: "I respect your time and deadlines. You'll receive a clear timeline and on-time delivery, guaranteed." },
+    { title: "Dedicated to Your Success", description: "Your success is my priority. I create designs that not only look great but also achieve your business goals." },
+    { title: "Professional Workflow", description: "Experience an organized, transparent, and collaborative process from start to finish." },
 ];
 
 const ContactPage = () => {
@@ -78,7 +78,7 @@ const ContactPage = () => {
                 Let's Create Something Amazing Together
               </h1>
               <p className="mt-6 text-lg text-text-secondary">
-                Start Your Project with a Trusted Design Partner. You're not just looking for a designer; you're looking for a partner to bring your vision to life. I focus on clear communication, reliable delivery, and designs that drive real results for your business.
+                Looking for a design partner who delivers results? I focus on clear communication and reliable delivery to bring your vision to life.
               </p>
               <div className="mt-12">
                 <h2 className="text-2xl font-bold text-foreground">Why Partner With Me?</h2>
