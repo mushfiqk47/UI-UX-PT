@@ -1,37 +1,60 @@
 import { Button } from "./ui/button";
-import { Link } from "react-router-dom";
+import { Menu } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 
 export const Header = () => {
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
+
   const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/#about" },
-    { name: "Projects", href: "/#projects" },
-    { name: "Skills", href: "/#skills" },
-    { name: "Testimonials", href: "/#testimonials" },
-    { name: "Pricing", href: "/pricing" },
-    { name: "FAQ", href: "/#faq" },
+    {
+      label: "Projects",
+      href: isHomePage ? "#projects" : "/#projects",
+    },
+    {
+      label: "Skills",
+      href: isHomePage ? "#skills" : "/#skills",
+    },
+    {
+      label: "Testimonials",
+      href: isHomePage ? "#testimonials" : "/#testimonials",
+    },
+    {
+      label: "About",
+      href: isHomePage ? "#about" : "/#about",
+    },
+    {
+      label: "Contact",
+      href: "/contact",
+    },
   ];
 
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-        <Link to="/" className="text-xl font-bold">
-          Mushfiq Kabir
+    <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-sm">
+      <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-6">
+        <Link to="/" className="text-2xl font-bold text-primary">
+          Mushfiq
         </Link>
-        <nav className="hidden space-x-6 md:flex">
+        <nav className="hidden md:flex md:items-center md:space-x-8">
           {navLinks.map((link) => (
             <a
-              key={link.name}
+              key={link.href}
               href={link.href}
-              className="text-sm font-medium text-text-secondary transition-colors hover:text-text-primary"
+              className="font-medium text-text-secondary transition-colors hover:text-primary"
             >
-              {link.name}
+              {link.label}
             </a>
           ))}
         </nav>
-        <Button asChild className="rounded-full">
-          <Link to="/contact">Contact</Link>
-        </Button>
+        <div className="hidden md:block">
+          <Button asChild>
+            <a href="mailto:mushfiqkabir@email.com">Hire Me</a>
+          </Button>
+        </div>
+        <button className="p-2 md:hidden">
+          <Menu className="h-6 w-6" />
+          <span className="sr-only">Open menu</span>
+        </button>
       </div>
     </header>
   );
