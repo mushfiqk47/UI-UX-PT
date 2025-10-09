@@ -91,9 +91,13 @@ const ProjectDetail = () => {
             </div>
 
             <img
-              src={project.heroImage}
+              src={(new URL(project.heroImage, typeof window !== 'undefined' ? window.location.origin : 'http://localhost')).toString()}
+              srcSet={[800,1200,1600,2000,2400].map(w=>{try{const u=new URL(project.heroImage, typeof window!=='undefined'?window.location.origin:'http://localhost');u.searchParams.set('width', String(w));return `${u.toString()} ${w}w`;}catch{return `${project.heroImage} ${w}w`;}}).join(', ')}
+              sizes="100vw"
               alt={project.title}
-              loading="lazy"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
               className="w-full rounded-xl object-cover shadow-2xl opacity-0 transition-opacity duration-700 will-change-auto"
               onLoad={(e) => (e.currentTarget.style.opacity = '1')}
             />
