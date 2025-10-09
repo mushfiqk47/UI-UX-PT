@@ -96,7 +96,7 @@ const ProjectDetail = () => {
               sizes="100vw"
               alt={project.title}
               loading="eager"
-              fetchPriority="high"
+              {...{ fetchpriority: "high" }}
               decoding="async"
               className="w-full rounded-xl object-cover shadow-2xl opacity-0 transition-opacity duration-700 will-change-auto"
               onLoad={(e) => (e.currentTarget.style.opacity = '1')}
