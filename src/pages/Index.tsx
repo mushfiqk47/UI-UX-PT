@@ -6,6 +6,7 @@ import { Testimonials } from "@/components/Testimonials";
 import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
 import { SoftwareCarousel } from "@/components/SoftwareCarousel";
+import { FeaturedProjects } from "@/components/FeaturedProjects";
 
 const Index = () => {
   return (
