@@ -7,6 +7,19 @@ interface ProjectListItemProps {
 }
 
 export const ProjectListItem = ({ project }: ProjectListItemProps) => {
+  const makeWidthUrl = (url: string, w: number) => {
+    try {
+      const u = new URL(url, typeof window !== "undefined" ? window.location.origin : "http://localhost");
+      u.searchParams.set("width", String(w));
+      return u.toString();
+    } catch {
+      return url.includes("width=") ? url.replace(/width=\d+/, `width=${w}`) : `${url}${url.includes("?") ? "&" : "?"}width=${w}`;
+    }
+  };
+  const srcSet = [800, 1200, 1600, 2000, 2400]
+    .map((w) => `${makeWidthUrl(project.heroImage, w)} ${w}w`)
+    .join(", ");
+
   return (
     <div className="group transition-transform duration-300 ease-out hover:-translate-y-0.5">
       <Link
@@ -15,10 +28,13 @@ export const ProjectListItem = ({ project }: ProjectListItemProps) => {
       >
         <div className="w-full overflow-hidden rounded-lg md:w-1/3 shadow-sm transition-shadow duration-300 group-hover:shadow-xl">
           <img
-            src={project.heroImage}
+            src={makeWidthUrl(project.heroImage, 1200)}
+            srcSet={srcSet}
+            sizes="(min-width: 1024px) 33vw, 100vw"
             alt={project.title}
             className="aspect-[4/3] w-full object-cover transition-transform duration-300 group-hover:scale-105"
             loading="lazy"
+            decoding="async"
           />
         </div>
         <div className="w-full md:w-2/3">
