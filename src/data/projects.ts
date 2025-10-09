@@ -20,8 +20,8 @@ export const projects: Project[] = [
     description:
       "Sustainably crafted furniture designed to last generations, not seasons.",
     tags: ["E-commerce", "Sustainability", "Storytelling"],
-    heroImage: "/placeholder.svg",
-    gallery: [],
+    heroImage: "https://cdn.builder.io/api/v1/image/assets%2F42744ba418204494ab1123ba3d167847%2Fbd26291cd2474421839a5b8e75581572?format=webp&width=800",
+    gallery: ["https://cdn.builder.io/api/v1/image/assets%2F42744ba418204494ab1123ba3d167847%2Fbd26291cd2474421839a5b8e75581572?format=webp&width=800"],
     overview:
       "Terrain creates heirloom-quality furniture with sustainable materials and artisan techniques. The goal was to evolve a static catalog into an experience that communicates legacy, craft, and conscience across the journey.",
     problem:
@@ -41,8 +41,8 @@ export const projects: Project[] = [
     description:
       "Marketplace connecting local artisans with those who value handcrafted goods.",
     tags: ["Marketplace", "E-commerce", "Makers"],
-    heroImage: "/placeholder.svg",
-    gallery: [],
+    heroImage: "https://cdn.builder.io/api/v1/image/assets%2F42744ba418204494ab1123ba3d167847%2F1f549c6b903d49fd871f764bb9e45220?format=webp&width=800",
+    gallery: ["https://cdn.builder.io/api/v1/image/assets%2F42744ba418204494ab1123ba3d167847%2F1f549c6b903d49fd871f764bb9e45220?format=webp&width=800"],
     overview:
       "A curated marketplace to discover makers and their stories. We needed a shopping flow that celebrates craft while keeping discovery simple and performant.",
     problem:
@@ -62,8 +62,8 @@ export const projects: Project[] = [
     description:
       "Clean, credible website for a renewable energy provider with proof-driven content.",
     tags: ["Corporate", "Energy", "B2B"],
-    heroImage: "/placeholder.svg",
-    gallery: [],
+    heroImage: "https://cdn.builder.io/api/v1/image/assets%2F42744ba418204494ab1123ba3d167847%2F9a566679f9454d5890a1f9529629ab57?format=webp&width=800",
+    gallery: ["https://cdn.builder.io/api/v1/image/assets%2F42744ba418204494ab1123ba3d167847%2F9a566679f9454d5890a1f9529629ab57?format=webp&width=800"],
     overview:
       "Karya required a proof-rich site for solar and wind solutions serving multiple audiences. The experience needed to convert interest into qualified conversations.",
     problem:
@@ -83,8 +83,8 @@ export const projects: Project[] = [
     description:
       "Strategy-led web, software, branding, motion, and SEO solutions that drive growth.",
     tags: ["Agency", "Web", "Branding", "SEO"],
-    heroImage: "/placeholder.svg",
-    gallery: [],
+    heroImage: "https://cdn.builder.io/api/v1/image/assets%2F42744ba418204494ab1123ba3d167847%2F23130e62753044dc8349f84a4028056a?format=webp&width=800",
+    gallery: ["https://cdn.builder.io/api/v1/image/assets%2F42744ba418204494ab1123ba3d167847%2F23130e62753044dc8349f84a4028056a?format=webp&width=800"],
     overview:
       "Dantage needed a conversion-focused site that surfaces outcomes, proof, and services with a clear path to contact.",
     problem:
@@ -104,8 +104,8 @@ export const projects: Project[] = [
     description:
       "Precision engineering and automation solutions for modern manufacturing.",
     tags: ["Manufacturing", "Automation", "B2B"],
-    heroImage: "/placeholder.svg",
-    gallery: [],
+    heroImage: "https://cdn.builder.io/api/v1/image/assets%2F42744ba418204494ab1123ba3d167847%2Fcd731d6d35e741c1844efe8f6d1b4cc5?format=webp&width=800",
+    gallery: ["https://cdn.builder.io/api/v1/image/assets%2F42744ba418204494ab1123ba3d167847%2Fcd731d6d35e741c1844efe8f6d1b4cc5?format=webp&width=800"],
     overview:
       "Prodmast helps manufacturers increase efficiency, reduce costs, and innovate. The site needed to communicate complex capabilities simply and credibly.",
     problem:
